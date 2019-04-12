@@ -60,7 +60,6 @@ $(document).ready(function () {
 
 function timerIncrement() {
   idleTime = idleTime + 1;
-  console.log("time: "+idleTime);
   if (idleTime == 30) { // 30 sec
     $('#myModal3').modal('show');
   }
