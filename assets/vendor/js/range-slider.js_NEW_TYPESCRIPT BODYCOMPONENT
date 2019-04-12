@@ -1,0 +1,39 @@
+function setCuotasSlider() {
+    var slider = document.getElementById("range-slider__range_1").value;
+    var sliderFormat = (Intl.NumberFormat('es-CL').format(parseInt(slider)));
+    document.getElementById("control-ncuotas").innerHTML = sliderFormat;
+    //console.log(sliderFormat);
+}
+
+function setCuotasFin(){
+    var slider = document.getElementById("range-slider__range_1").value;
+    var sliderFormat = (Intl.NumberFormat('es-CL').format(parseInt(slider)));
+    console.log(sliderFormat);
+}
+
+function setMontoPrestamo() {
+    var slider = document.getElementById("range-slider__range_2").value;
+    var sliderFormat = "$" + Intl.NumberFormat('es-CL').format(parseInt(slider));
+    document.getElementById("form-control-montoprestamo").value = sliderFormat;
+    /*console.log(sliderFormat);*/
+}
+
+function blurSetMontoPrestamo(){
+    document.getElementById('form-control-montoprestamo').focus();
+}
+function setMontoCuota() {
+    var slider = document.getElementById("range-slider__range_3").value;
+    var sliderFormat = "$" + Intl.NumberFormat('es-CL').format(parseInt(slider));
+    document.getElementById("form-control-montocuota").value = sliderFormat;
+    /*console.log(sliderFormat);*/
+}
+
+function blurSetMontoCuota(){
+    document.getElementById('form-control-montocuota').focus();
+}
+
+function setChangePrestamo(){
+    var input = document.getElementById("form-control-montoprestamo").value;
+    document.getElementById("range-slider__range_2").value = input;
+    console.log(input);
+}

@@ -1,0 +1,20 @@
+function setCuotasSlider(){
+  slider = document.getElementById("range-slider__range_1").value;
+  sliderFormat = Intl.NumberFormat('es-CL').format(slider)
+  document.getElementById("form-control-ncuotas").value = sliderFormat;
+  /*console.log(slider);*/
+}
+
+function setMontoPrestamo(){
+  slider = document.getElementById("range-slider__range_2").value;
+  sliderFormat = "$" + Intl.NumberFormat('es-CL').format(slider)
+  document.getElementById("form-control-montoprestamo").value = sliderFormat;
+  console.log(sliderFormat);
+}
+
+function setMontoCuota(){
+  slider = document.getElementById("range-slider__range_3").value;
+  sliderFormat = "$" +  Intl.NumberFormat('es-CL').format(slider)
+  document.getElementById("form-control-montocuota").value = sliderFormat;
+  console.log(slider);
+}

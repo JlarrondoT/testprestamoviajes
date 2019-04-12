@@ -1,0 +1,709 @@
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5){
+
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    }
+    
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  }
+html, body{
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+
+  h2{
+    color:rgb(1, 165, 224)!important;
+  }
+
+  h4{
+    color:rgb(145, 145, 145)!important;
+  }
+  p{
+    color: rgb(73, 73, 73)!important;
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #1D689E;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #1D689E;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+  /*BOTONES CONTACTO*/
+
+  .queMeContacten {
+    -moz-box-shadow:inset 0px -3px 7px 0px #326295;
+    -webkit-box-shadow:inset 0px -3px 7px 0px #326295;
+    box-shadow:inset 0px -3px 7px 0px #326295;
+    background-color:#326295;
+    border:1px solid #0c3ed4;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 53px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #1a50ba;
+  }
+  .queMeContacten:hover {
+    /*background-color: #0c3ed4;*/
+  }
+  .queMeContacten:active {
+    position:relative;
+    top:1px;
+  }
+  
+  /*Enviar simulacion*/
+
+    .enviarSimulacion {
+    -moz-box-shadow:unset 0px -3px 7px 0px #163da8;
+    -webkit-box-shadow:unset 0px -3px 7px 0px #163da8;
+    box-shadow:unset 0px -3px 7px 0px #163da8;
+    background-color:white;
+    border:1px solid #0c4387;
+    display:inline-block;
+    cursor:pointer;
+    color:#0c4387;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 53px;
+    text-decoration:none;
+   
+  }
+  .enviarSimulacion:hover {
+    /*background-color:#0c4387;*/
+  }
+  .enviarSimulacion:active {
+    top:1px;
+  }
+
+  .btnFooter{
+    -moz-box-shadow:unset 0px -3px 7px 0px #163da8;
+    -webkit-box-shadow:unset 0px -3px 7px 0px #163da8;
+    box-shadow:unset 0px -3px 7px 0px #163da8;
+    background-color:white;
+    border:1px solid #0c4387;
+    display:inline-block;
+    cursor:pointer;
+    color:#0c4387;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 53px;
+    text-decoration:none;
+   
+  }
+  .btnFooter:hover {
+    /*background-color:#0c4387;*/
+  }
+  .btnFooter:active {
+    top:1px;
+  }
+
+  @media all and (max-width: 680px) {
+    .queMeContacten {
+      margin-top: 2%;
+      width: 100%;
+    }
+    .enviarSimulacion {
+      width: 100%;
+    }
+  }
+
+
+/*compone credito + sliders*/
+  .grid-container-ComponeCreditoSliders {
+    height:auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "numeroDeCuotas numeroDeCuotas componeCredito" "montoDelPrestamo montoDelPrestamo componeCredito" "valorCuotaMensual valorCuotaMensual componeCredito";
+  }
+
+  @media all and (max-width: 680px) {
+    .grid-container-ComponeCreditoSliders {
+      /* When on medium sized screens, we center it by evenly distributing empty space around items */
+      flex-wrap: wrap;
+      display: flex;
+    }
+  }
+
+
+  .numeroDeCuotas {
+    height: auto;
+    padding: 2%;
+    margin: 3px;
+    box-shadow:inset 0px 0px 2px 0px rgb(219, 218, 217)!important;
+    border:1px solid rgb(219, 218, 217)!important;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "textoNumeroDeCuotas textoNumeroDeCuotas textoCalendario" "sliderNumeroDeCuotas sliderNumeroDeCuotas calendarioPicker";
+    grid-area: numeroDeCuotas;
+  }
+  .form-groupCombo2{
+    display: none;
+  }
+
+  @media all and (max-width: 680px) {
+    .sliderNumeroDeCuotas{
+      display: none;
+    }
+    .form-groupCombo2{
+      display: block;
+    }
+  }
+  
+.numeroDeCuotas p{
+    color: rgb(112, 111, 112)
+}
+
+  .textoNumeroDeCuotas { grid-area: textoNumeroDeCuotas; }
+  
+  .sliderNumeroDeCuotas { grid-area: sliderNumeroDeCuotas; }
+  
+  .textoCalendario { grid-area: textoCalendario; }
+  
+  .calendarioPicker { grid-area: calendarioPicker; }
+  
+  .montoDelPrestamo {
+    padding: 2%;
+    margin: 3px;
+    margin: 3px;
+    box-shadow:inset 0px 0px 2px 0px rgb(219, 218, 217)!important;
+    border:1px solid rgb(219, 218, 217)!important;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "textoMontoDelPrestamo textoMontoDelPrestamo inputMontoPrestamo" "sliderMontoDelPrestamo sliderMontoDelPrestamo sliderMontoDelPrestamo";
+    grid-area: montoDelPrestamo;
+  }
+  
+  .textoMontoDelPrestamo { grid-area: textoMontoDelPrestamo; }
+  
+  .sliderMontoDelPrestamo { grid-area: sliderMontoDelPrestamo; }
+  
+  .inputMontoPrestamo { grid-area: inputMontoPrestamo; }
+
+  /**MEDIA QUERY DIVS SLIDERS*/
+
+  @media all and (max-width: 680px) {
+
+
+    /*MEDIA QUERY MONTO PRESTAMO*/
+    .montoDelPrestamo{
+      padding: 5%!important;
+      grid-template-areas:
+      'textoMontoDelPrestamo'
+      'inputMontoPrestamo'
+      'sliderMontoDelPrestamo';
+      grid-template-columns: 100%;
+      padding-bottom:10%!important;
+    }
+    .textoMontoDelPrestamo{
+      width: 100%;
+      float: left;
+    }
+    .inputMontoPrestamo{
+      width: 100%;
+    }
+    .form-control-montoprestamo{
+      width: 84%!important;
+    }
+    .sliderMontoDelPrestamo{
+      width: 100%;
+      margin-top: 10%;
+    }
+    /*MEDIA QUERY VALOR CUOTA MENSUAL*/
+    .valorCuotaMensual{
+      padding: 5%!important;
+      display: flex;
+      grid-template-areas:
+      'textoValorCuotaMensual'
+      'inputValorCuotaMensual'
+      'sliderValorCuotaMensual'!important;
+      grid-template-columns: 100%!important;
+    }
+    .textoValorCuotaMensual{
+      width: 100%;
+      float: left;
+    }
+    .form-control-montocuota{
+      width: 84%!important;
+    }
+    .sliderValorCuotaMensual{
+      width: 100%;
+      margin-top: 10%;
+      margin-bottom: 10%;
+    }
+    /*MEDIA QUERY COMPONE CRE*/
+    .txtComoSeComponeCre{
+      padding: 5%!important;
+      display: none;
+    }
+    .caeTasaInteres {   
+      padding: 2%!important;
+      padding-top: 3%!important;
+    }
+
+
+    /*MEDIA QUERY NUMERO DE CUOTAS*/
+    .numeroDeCuotas {
+      padding: 5%!important;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: 
+      "textoNumeroDeCuotas  textoCalendario" 
+      "form-groupCombo2 calendarioPicker";
+    }
+    .textoNumeroDeCuotas{
+      width: 90%;
+    }
+    .textoCalendario{
+      width: 60%;
+    }
+    .combo2{
+      height: 47px!important;
+    }
+    .form-groupCombo2{
+      width: 90%;
+
+    }
+    .calendarioPicker{
+      height: 80%!important;
+    }
+  }
+  
+  .valorCuotaMensual {
+    padding: 2%;
+    margin: 3px;
+    margin: 3px;
+    box-shadow:inset 0px 0px 2px 0px rgb(219, 218, 217)!important;
+    border:1px solid rgb(219, 218, 217)!important;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "textoValorCuotaMensual textoValorCuotaMensual inputValorCuotaMensual" "sliderValorCuotaMensual sliderValorCuotaMensual sliderValorCuotaMensual";
+    grid-area: valorCuotaMensual;
+  }
+  
+  .textoValorCuotaMensual { grid-area: textoValorCuotaMensual; }
+  
+  .inputValorCuotaMensual { grid-area: inputValorCuotaMensual; }
+  
+  .sliderValorCuotaMensual { grid-area: sliderValorCuotaMensual; }
+  
+  .componeCredito {
+    padding: 2%;
+    margin: 3px;
+    margin: 3px;
+    box-shadow:inset 0px 0px 2px 0px rgb(219, 218, 217)!important;
+    border:1px solid rgb(219, 218, 217)!important;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "comoSeComponeCredito comoSeComponeCredito comoSeComponeCredito" "comoSeComponeCredito comoSeComponeCredito comoSeComponeCredito" "caeTasaInteres caeTasaInteres caeTasaInteres";
+    grid-area: componeCredito;
+  }
+
+  .componeCredito h2{
+    color: rgba(4,165,224,1);
+  }
+  
+  .comoSeComponeCredito { grid-area: comoSeComponeCredito; }
+  
+  .caeTasaInteres { grid-area: caeTasaInteres;     
+    border-top:1px solid rgb(219, 218, 217)!important; 
+    padding: 7%;
+    padding-top: 8%;
+  }
+
+    /*MEDIA QUERY COMPONE CREDITO*/
+
+
+  /*Header*/
+  .headerCenter{
+ 
+    width: 100%;
+    height: 223px;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+  }
+
+  .hIzquierda{
+    height: 50%;
+    width: 50%;
+    float: left;
+    padding-left: 0%!important;
+  }
+
+
+  .hDerecha{
+    background-color: rgb(26, 105, 158)!important;
+
+    height: 50%;
+    width: 50%;
+    float: right;
+    height: inherit;
+    text-align: left;
+  }
+
+  @media all and (max-width: 680px) {
+    .hDerecha {
+      display: none!important;
+    }
+    .headerMQ{
+      display: none!important;
+    }
+    .hIzquierda img{
+      max-width: 400%;
+    }
+    .headerCenter{
+      margin-top: 4%;
+    }
+  }
+
+  p.headerP{
+    padding-top: 6%;
+    color: white!important;
+    text-align: left;
+  }
+
+    /*Footer*/
+  .footerCenter{
+    width: 100%;
+    height: 100%;
+  }
+
+  @media all and (max-width: 680px) {
+    .footerCenter {
+      display: none!important;
+    }
+  }
+  @media all and (max-width: 991px) {
+
+    .planeBox {
+      margin: 1%!important;
+      width: 90%!important;
+      white-space: normal;
+    }
+    .txtComoSeComponeCre{
+      margin: 1%!important;
+    }
+  }
+
+  .footer-preg{
+    background-color: rgb(236, 232, 241);
+    width: 51%!important;
+  }
+  .footer-preg img{
+    width: 80%;
+    height:50%;
+  }
+
+  .footer-derecha{
+    height: inherit;
+    width: 49%;
+  }
+
+/*inputs*/
+.form-control-montoprestamo 
+  {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 76%;
+    padding: 10px 20px;
+    border: 3px solid #c0c0c0;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: normal normal bold 17px/normal "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: rgb(46, 45, 45);
+    text-align: right;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: #ffffff;
+    -webkit-box-shadow: 134px 50px 0 0 #ffffff inset;
+    box-shadow: 134px 50px 0 0 #ffffff inset;
+    text-shadow: 1px 1px 0 rgba(90,90,90,0.48) ;
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  }
+
+.form-control-montoprestamo:focus
+{
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 76%;
+  padding: 10px 20px;
+  border: 3px solid #04a5e0;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal normal bold 17px/normal "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: rgb(46, 45, 45);
+  text-align: right;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(252,252,252,1);
+  -webkit-box-shadow: 134px 50px 0 0 rgba(217,240,247,0.98) inset;
+  box-shadow: 134px 50px 0 0 rgba(217,240,247,0.98) inset;
+  text-shadow: 1px 1px 0 rgba(90,90,90,0.48) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.form-control-montocuota 
+  {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 76%;
+    padding: 10px 20px;
+    border: 3px solid #c0c0c0;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: normal normal bold 17px/normal "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: rgb(46, 45, 45);
+    text-align: right;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: #ffffff;
+    -webkit-box-shadow: 134px 50px 0 0 #ffffff inset;
+    box-shadow: 134px 50px 0 0 #ffffff inset;
+    text-shadow: 1px 1px 0 rgba(90,90,90,0.48) ;
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  }
+
+.form-control-montocuota:focus
+{
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 76%;
+  padding: 10px 20px;
+  border: 3px solid #04a5e0;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal normal bold 17px/normal "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: rgb(46, 45, 45);
+  text-align: right;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(252,252,252,1);
+  -webkit-box-shadow: 134px 50px 0 0 rgba(217,240,247,0.98) inset;
+  box-shadow: 134px 50px 0 0 rgba(217,240,247,0.98) inset;
+  text-shadow: 1px 1px 0 rgba(90,90,90,0.48) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/*Avion box*/
+.planeBox {
+  margin: 0 auto;
+  white-space: nowrap;
+  width: auto;
+  padding: 20px;
+  overflow: hidden;
+  border: none;
+  -webkit-border-radius: 22px;
+  border-radius: 22px;
+  color: rgba(4,165,224,1);
+  text-align: right;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: rgba(255,255,255,1);
+  -webkit-box-shadow: 0 0 0 3px rgba(4,165,224,1) ;
+  box-shadow: 0 0 0 3px rgba(4,165,224,1) ;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;
+}
+
+
+/**BOTONERAS VER 3**/
+
+.btnsSegurosV4 {
+  box-shadow:inset 0px 0px 2px 0px rgb(219, 218, 217);
+  border:1px solid rgb(219, 218, 217);
+  background-color:	#F7F7F7;
+  height: 100%;
+  display: block;
+  padding: 2%;
+}
+@media all and (max-width: 680px){
+  .btnsSegurosV4{
+    padding-left: 10%!important;
+  }
+}
+
+
+.txtBotoneras{
+  text-align: center;
+  display: inline-block;
+  white-space: nowrap;
+  padding-top: 11%;
+  padding-left: 120%;
+}
+
+.resumenCre{
+  border-collapse:collapse;
+  margin: 60%;
+}
+
+@media all and (max-width: 680px) {
+  .grid-container-ComponeCreditoSliders{
+    flex-direction: column;
+  }
+  .montoDelPrestamo{
+    order: 1;
+  }
+  .numeroDeCuotas{
+    order: 2;
+  }
+  .valorCuotaMensual{
+    order: 3;
+  }
+  .componeCredito{
+    order: 4;
+  }
+
+}
+/*MODALES*/
+.closeBoton{
+  position: absolute;
+  color:black;
+  padding-top:1%;
+  padding-left:97%;
+  cursor:pointer;
+  }
+  .textOverlayContact {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color:#1D689E;
+  }
+  .textOverlayBotonCerrar {
+  color: black;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  }
+  .overlayContact {
+  position: absolute;
+  top: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  width: 100%;
+  transition: .5s ease;
+  background-color: #FFFFFF;
+  opacity:0.7;
+  }
+  
+  @media all and (max-width: 510px) {
+  .closeBoton{
+  position: absolute;
+  color:black;
+  padding-top:1%;
+  padding-left:95%;
+  cursor:pointer;
+  }
+  }
+  
